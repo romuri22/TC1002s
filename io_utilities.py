@@ -1,3 +1,5 @@
+import pandas as pd
+
 def readvanilla():
     # Reads Dataset and stores results in dictionary
     # Only for python3.8
@@ -13,5 +15,13 @@ def readvanilla():
     return data
 
 
+def read_pandas(filepath):
+
+    df = pd.read_csv(filepath)
+
+    return df
+
 if __name__ == "__main__":
-    print(readvanilla())
+    filepath = "./data/iris.data"
+    df = read_pandas(filepath)
+    print(df)
